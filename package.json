@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "uuid": "^11.1.0"
-=======
   "name": "react-crash",
   "private": true,
   "version": "0.0.0",
@@ -38,6 +34,5 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.7",
     "vite": "^6.3.5"
->>>>>>> 6746d5e (Initial commit with React build and JSON data)
   }
 }
