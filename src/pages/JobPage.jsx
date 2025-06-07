@@ -114,7 +114,7 @@ const JobPage = ({  deleteJob }) => {
 
 {/* feature of react router */}
 const jobLoader = async ({ params }) => {
-    const res = await fetch(`/api/jobs/${params.id}`);
+    const res = await fetch(`https://run.mocky.io/v3/645f0697-10a0-421c-b70d-642ccf45b0bb/${params.id}`);
     const data = await res.json();
     return data;
 };
