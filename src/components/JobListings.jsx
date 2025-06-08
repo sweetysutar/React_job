@@ -12,14 +12,10 @@ import Spinner from './Spinner';
     const fetchJobs = async () => {
       const apiUrl = isHome ? `${import.meta.env.VITE_API_URL}/jobs?_start=0&_end=3` : `${import.meta.env.VITE_API_URL}/jobs`
       try {
-        console.log("Fetching from:", apiUrl);
         await new Promise(res => setTimeout(()=>{res()}, 1000));
         const res = await fetch(apiUrl);
 
-        console.log("Response status:", res.status);
         const data = await res.json();
-        console.log("Data received:", data);
-
         setJobs(data);
         } catch (error) {
           console.log('Error fetching data', error)
