@@ -17,7 +17,7 @@ import EditJobPag from './pages/EditJobPage'
 const App = () => {
   // Add new job 
   const addJob = async (newJob) => {
-    const res = await fetch('https://run.mocky.io/v3/645f0697-10a0-421c-b70d-642ccf45b0bb', {
+    const res = await fetch(`${import.meta.env.VITE_API_URL}/jobs`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
@@ -29,7 +29,7 @@ const App = () => {
 
 // Delete Job
 const deleteJob = async (id) => {
-   const res = await fetch(`https://run.mocky.io/v3/645f0697-10a0-421c-b70d-642ccf45b0bb/${id}`, {
+   const res = await fetch(`${import.meta.env.VITE_API_URL}/jobs/${id}`, {
       method: 'DELETE',
     });
     return;
@@ -37,7 +37,7 @@ const deleteJob = async (id) => {
 
 // Update Job
 const updatedJob = async (job) => {
-  const res = await fetch(`https://run.mocky.io/v3/645f0697-10a0-421c-b70d-642ccf45b0bb/${job.id}`, {
+  const res = await fetch(`${import.meta.env.VITE_API_URL}/jobs/${job.id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json'
